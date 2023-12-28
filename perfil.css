@@ -1,0 +1,942 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+@media (max-width: 576.98px) {
+    
+}
+
+@media (min-width:1200px) {
+
+    .body {
+        background-image: url("https://i.pinimg.com/originals/dd/85/7c/dd857c9277df58b12227e420a96c158e.gif");
+    }
+
+    .bodyWhite{
+        background-image: url(../imagenes/wolf.jpg);
+    }
+
+    .body, .bodyWhite, .bodyCotizacion, .bodyGaleria, .bodyTigre, .bodyWorking{
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        max-height: fit-content;
+        min-height: 100%;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        /*filter: blur(100px);*/
+        transition: filter 0.5s ease-in-out;
+    }
+
+    .bodyWorking {
+        background-image: url(../imagenes/working.jpg);
+        
+    }
+
+    .bodyTigre{
+        background-image: url(../imagenes/tigre.jpeg);
+    }
+
+    .bodyCotizacion{
+        background-color: rgb(214, 214, 214);
+    }
+
+    .bodyLion{
+        background: rgb(32, 32, 32);
+        background-size: contain;
+        background-repeat: repeat;
+    }
+    .cajaGrande{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .bodyCotizacion:hover, .body:hover, .bodyGaleria:hover{
+        filter: blur(0px);
+    }
+
+    .bodyGaleria {
+        background: rgb(48, 48, 48);
+        background-size: contain;
+        background-repeat: repeat;
+    }
+
+    .cargarImagenes {
+        padding: 2vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5vh;
+        border: 3px dashed rgb(255, 165, 61);
+        border-radius: 40px;
+        background: rgba(0, 0, 0, 0.705);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 60vh;
+        text-align: center;
+    }
+
+    .cajaGrandeMenu {
+        height: 6vh;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        background-color: rgba(31, 31, 31, 0.507);
+        text-shadow: 1px 2px 5px white;
+        font-size: 6vh;
+        border-radius: 5px;
+        
+    }
+
+    .cajaChicaMenu {
+        font-family: 'Belanosima', sans-serif;
+        text-decoration: none;
+        color: rgb(235, 235, 235);
+        text-shadow: 1px 2px 5px rgb(155, 155, 155);
+        font-size: 5vh;
+        padding-right: 3vh;
+        padding-left: 3vh;
+    }
+    
+    .cajaChicaMenu:hover, .cajaChicaMenuGaleria:hover {
+        color: #fa8642;
+        text-shadow: 1px 2px 5px black;
+        background-color: white;
+        transition: all 0.6s;
+    }
+
+    .tituloInicial {
+        height: fit-content;
+        font-size: 7vh;
+        color: rgb(248, 248, 248);
+        font-family: 'Belanosima', sans-serif;
+        text-shadow: 1px 2px 5px rgb(122, 122, 122);
+        width: 75%;
+        font-weight: bold;
+        background-color: #222222e3;
+        text-align: center;
+        border-radius: 12px 12px 12px 12px;
+        border: 3px solid rgb(0, 0, 0);
+        border: 5px solid rgb(10, 10, 10);
+        box-shadow: 1px 2px 5px rgb(48, 48, 48);
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .navegacion {
+        margin: 30px auto;
+        width: fit-content;
+        
+    }
+
+    .navegacion ul {
+        list-style: none;
+    }
+
+    .navegacion > ul > li {
+       position: relative;
+       list-style: none;
+    }
+
+    .menu {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        border-radius: 40px;
+        background-color: rgba(36, 36, 36, 0.582);
+    }
+
+    .menu > li > a{
+        display: block;
+        padding: 15px 20px;
+        text-decoration: none;
+    }
+
+    .caja {
+        width: 100%;
+        text-decoration: none;
+        color: rgba(34, 34, 34, 0.651);
+        font-weight: bold;
+        font-size: 2.3vh;
+    }
+
+    .cajaNegra {
+        background-color: white;
+        width: auto;
+        padding: 20px;
+        top: 20vh;
+        border-left: 2px solid rgb(255, 132, 75);
+        font-family: 'Belanosima', sans-serif;
+    }
+
+    .caja:hover {
+        color: rgb(255, 255, 255);
+        transition: all 1s;
+    }
+
+    .cajaNegra:hover {
+        border-radius: 30px;
+        background-color: #fa8642;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        color: white;
+        transform: scale(1.1);
+        transition: all 0.7s;
+        
+    }
+
+    .submenu {
+        width: 100%;
+        left: 1vh;
+        text-align: center;
+        position: absolute;
+        list-style: none;
+        display: none;
+        
+    }
+
+    .menu li:hover .submenu {
+        display: block;
+    }
+
+    .submenu:before {
+        content: '';
+        width: 0;
+        height: -30vh;
+        border-left: 12px solid transparent;
+        border-right: 12px solid transparent;
+        border-bottom: 12px solid rgb(250, 112, 70);
+        position: relative;
+    }
+
+    .titulo {
+        font-size: 6vh;
+        color: rgb(255, 255, 255);
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        text-shadow: 1px 2px 5px rgb(233, 233, 233);
+        width: 100%;
+        background-color: #1a1a1ae3;
+        text-align: center;
+        margin-bottom: 10vh;
+        border-radius: 12px 12px 12px 12px;
+        border: 1.3px solid rgb(255, 255, 255);
+    }
+
+    h1 {
+        color: rgb(255, 255, 255);
+        font-size: 5vh;
+        font-family: 'Belanosima', sans-serif;
+        text-shadow: 1px 2px 5px rgb(233, 233, 233);
+        width: 70%;
+        height: 8vh;
+        font-weight: lighter;
+        background-color: #1a1a1ae3;
+        text-align: center;
+        margin-bottom: 5vh;
+        border-radius: 12px 12px 12px 12px;
+        border: 3px solid rgb(0, 0, 0);
+        border: 5px solid rgb(10, 10, 10);
+        border: 5px solid rgb(30, 30, 30);
+        box-shadow: 1px 2px 5px rgb(48, 48, 48);
+    }
+
+    .crearUsu {
+        margin-top: 2vh;
+        color: rgb(255, 255, 255);
+        font-size: 5vh;
+        font-family: 'Belanosima', sans-serif;
+        text-shadow: 1px 2px 5px rgb(233, 233, 233);
+        width: 60%;
+        height: 6vh;
+        font-weight: lighter;
+        background-color: #1a1a1ae3;
+        text-align: center;
+        margin-bottom: 5vh;
+        border-radius: 12px 12px 12px 12px;
+        border: 3px solid rgb(0, 0, 0);
+        border: 5px solid rgb(10, 10, 10);
+        border: 5px solid rgb(30, 30, 30);
+        box-shadow: 1px 2px 5px rgb(48, 48, 48);
+    }
+
+    .bienvPerfil, .bienvGaleria, .bienvCotizacion {
+        height: 6vh;
+    }
+
+    .bienvPerfil, .bienvCotizacion, .bienvGaleria {
+        color: orange;
+        text-shadow: 1px 2px 5px orangered;
+    }
+
+    .form {
+        height: 10vh;
+        border-radius: 12px 12px 12px 12px;
+        color: white;
+        font-size: 3vh;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        text-shadow: 1px 2px 10px white;
+        padding: 5vh;
+        background-color: rgba(0, 0, 0, 0.76);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 1px 3px 5px rgba(255, 255, 255, 0.452) , 3px 5px 20px rgb(252, 252, 252);
+        margin-bottom: 8vh;
+        position: relative;
+        border: 3px solid rgb(0, 0, 0);
+        border: 5px solid rgb(10, 10, 10);
+        border: 5px solid rgb(30, 30, 30);
+        box-shadow: 1px 2px 5px rgb(48, 48, 48);
+    }
+
+    p {
+        color: white;
+        font-size: 2vh;
+        font-family: 'Tektur', cursive;
+        text-shadow: 1px 2px 5px rgb(165, 165, 165);
+    }
+
+    input, .seleccionarArchivoLabel, .seleccionarArchivoCampo, .seleccionarArcihvo {
+        align-items: center;
+        text-align: center;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 2vh; 
+        height: 5vh;
+        width: 30vw;
+        outline: none;
+        border: 1px solid rgba(119, 119, 119, 0.521);
+        border: 5px solid rgb(30, 30, 30);
+        border-radius: 5px;
+        background-color: rgba(34, 34, 34, 0.801);
+        color: rgb(250, 250, 250);
+        margin-bottom: 1vh;
+    }
+
+    .usuario {
+        position: absolute;
+        left: 6vh;
+    }
+
+    .contraseña {
+        position: absolute;
+        left: 5.5vh;
+        bottom: 6.5vh;
+    }
+
+    .form label {
+        position: absolute;
+        pointer-events: none;
+        transition: 0.5s;
+    }
+   
+    .seleccionarArchivoLabel:hover{
+        cursor: pointer;
+        color: orange;
+    }
+
+
+    .form input:valid ~ .usuario,
+    .form input:focus ~ .usuario {
+        transform: translateX(20px) translateY(-10px);
+        color: rgb(255, 255, 255);
+        font-size: 0.65em;
+        padding: 0 -10px;
+        background-color: rgb(34, 34, 34);
+        letter-spacing: 0.1em;
+    }
+
+    .form input:valid ~ .contraseña,
+    .form input:focus ~ .contraseña {
+        transform: translateX(20px) translateY(-20px);
+        color: rgb(255, 255, 255);
+        font-size: 0.65em;
+        padding: 0 -10px;
+        background-color: rgb(34, 34, 34);
+        letter-spacing: 0.2em;
+    }
+
+    .form input:valid,
+    .form input:focus, .volverAtras:hover  {
+        border: 1px solid rgb(255, 146, 57);
+    }
+
+    input:focus{border: 1px solid rgb(231, 13, 42);}
+
+    .ingresoNombre{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 2vh;
+        text-shadow: 1px 1px 1px rgb(250, 250, 250);
+    }
+
+    .ingresoContra{
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 2vh;
+        font-weight: bold;
+        text-shadow: 1px 1px 1px rgb(247, 247, 247);
+    }
+
+    .btnResultado {
+        display: none;
+    }
+
+    .btnResultado:hover {
+        font-size: 2vh;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        box-shadow: 1px 1px 20px white;
+        background-color: rgb(255, 255, 255);
+        color: black;
+        text-shadow: 1px 1px 1px rgb(247, 247, 247);
+        cursor: pointer;
+    }
+
+    .crearUsuario {
+        color: rgb(255, 255, 255);
+        font-size: 5vh;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        text-shadow: 1px 2px 5px rgb(233, 233, 233);
+        width: 60%;
+        height: 6vh;
+        font-weight: lighter;
+        background-color: #1a1a1ae3;
+        text-align: center;
+        margin-bottom: 5vh;
+        border-radius: 12px 12px 12px 12px;
+        border: 3px solid rgb(0, 0, 0);
+        border: 5px solid rgb(10, 10, 10);
+        border: 5px solid rgb(30, 30, 30);
+        box-shadow: 1px 2px 5px rgb(48, 48, 48);
+    }
+
+    .volverAtras {
+        color: rgb(255, 255, 255);
+        font-size: 3vh;
+        font-family: 'Belanosima', sans-serif;
+        text-shadow: 1px 2px 5px rgb(255, 255, 255);
+        width: 50%;
+        height: 3.5vh;
+        font-weight: lighter;
+        background-color: #1a1a1ae3;
+        text-align: center;
+        border-radius: 12px 12px 12px 12px;
+        border: 1.3px solid rgba(255, 255, 255, 0.575);
+    }
+
+    footer {
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        height: 8vh;
+        background-color: rgb(0, 0, 0);
+        border-top: 1px solid rgb(255, 165, 61);
+        bottom: 0;
+    }
+
+    .footerTexto, .footerSubir {
+        margin-left: 5vh;
+        width: 40%;
+    }
+
+    .footerSubir {
+        cursor: pointer;
+        width: 3vh;
+        height: 3vh;
+        margin-top: 3vh;
+        background-position: center;
+        background-image: url("../imagenes/upVerde.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    /*********************************TARJETAS********************************************/
+
+    .tarjetaGrande{
+        margin: 5vw;
+        width: fit-content;
+        height: fit-content;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        border-radius: 20px 20px 10px 10px;
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.603);
+        border-radius: 30px 30px 10px 10px;
+        box-shadow: 3px 10px 20px rgb(0, 0, 0);
+        flex-wrap: nowrap;
+    }
+
+    .tarjetaMediana {
+        flex-wrap: nowrap;
+        width: fit-content;
+        height: fit-content;
+        flex-direction: row;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 20px;
+        background-color: rgba(0, 0, 0, 0.603);
+        border-radius: 30px 30px 10px 10px;
+        box-shadow: 3px 10px 20px rgb(0, 0, 0);
+    }
+
+    .tarjetaChicaGif {
+        background-repeat: no-repeat;
+        width: 25vw;
+        height: 40vh;
+        margin: 5px;
+        border: rgba(0, 0, 0, 0.781) 2px solid;
+        border-radius: 30px 30px 30px 30px;
+        box-shadow: 1px 3px 10px rgb(0, 0, 0);
+    }
+
+    .tarjetaChica1 {
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 30vh;
+        height: 30vh;
+        background-size: cover;
+        border: rgba(255, 255, 255, 0) 10px solid;
+        border-radius: 30px 30px 30px 30px;
+        box-shadow: 1px 3px 10px rgb(0, 0, 0);
+    }
+
+    .tarjetaChica2 {
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 50vh;
+        height: 50vh;
+        background-size: cover;
+        border: rgb(221, 221, 221) 10px solid;
+        border-radius: 30px 30px 30px 30px;
+        box-shadow: 1px 3px 10px rgb(0, 0, 0);
+    }
+
+    .tarjetaChica3 {
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 50vh;
+        height: 50vh;
+        background-size: cover;
+        border: rgb(221, 221, 221) 10px solid;
+        border-radius: 30px 30px 30px 30px;
+        box-shadow: 1px 3px 10px rgb(0, 0, 0);
+    }
+
+    .tarjetaTitulo {
+        margin: 20px;
+        font-size: 5vh;
+        color: rgb(235, 235, 235);
+        text-shadow: 1px 3px 5px black;
+        font-family: 'Belanosima', sans-serif;
+    }
+
+    .tarjetaTitulo2 {
+       text-align: center;
+        border-radius: 30px;
+        margin: 20px;
+        font-size: 4vh;
+        width: 100%;
+        color: rgba(208, 255, 78, 0.658);
+        text-shadow: 1px 3px 5px black;
+        font-family: 'Creepster', cursive;
+        background-color: rgba(29, 29, 29, 0.925);
+    }
+
+
+/*********************************TARJETAS POWER ON POWER OFF********************************************/
+
+    .tarjetaGrandeConexion{
+        margin: 10px;
+        width: 6vw;
+        height: 8vh;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        border-radius: 20px 20px 10px 10px;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.904);
+        border-radius: 30%;
+        box-shadow: 3px 10px 20px rgb(0, 0, 0);
+        flex-wrap: nowrap;
+        align-self: start;
+        position: absolute;
+    }
+
+    .tarjetaMedianaConexion {
+        width: fit-content;
+        height: fit-content;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.603);
+        border-radius: 30px 30px 10px 10px;
+        box-shadow: 3px 10px 20px rgb(0, 0, 0);
+    }
+
+    .tarjetaChicaGifConexion {
+        position: relative;
+        background-repeat: no-repeat;
+        width: 90%;
+        height: 90%;
+        border: rgba(0, 0, 0, 0.781) 2px solid;
+        border-radius: 30px 30px 30px 30px;
+        box-shadow: 1px 3px 10px rgb(0, 0, 0);
+    }
+
+    .tarjetaTrabajando {
+        position: relative;
+        background-repeat: no-repeat;
+        width: 50vh;
+        height: 70vh;
+        border: rgba(0, 0, 0, 0.781) 2px solid;
+        border-radius: 30px 30px 30px 30px;
+        box-shadow: 1px 3px 10px rgb(0, 0, 0);
+        background-image: url(../imagenes/think.gif);
+        background-size: cover;
+        background-position: center;
+    }
+
+/**********************JUEGO DE MEMORIA CSS*******************************/
+
+    .granContenedorGame {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contenedorGame {
+        margin-top: 14vh;
+        width: 70%;
+        height: 70vh;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        align-self: center;
+        background-color: rgb(105, 105, 105);
+        border-radius: 40px;
+    }
+
+    .h2Game {
+        padding-left: 3vw;
+        padding-right: 3vw;
+        margin-top: 2vh;
+        font-size: 3em;
+        color: rgb(255, 166, 83);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-family: 'Belanosima', sans-serif;
+        background-color: white;
+        border-radius: 40px;
+    }
+    
+    .reset {
+        padding: 15px 20px;
+        color: rgb(255, 116, 52);
+        background: white;
+        border: none;
+        font-size: 1.5em;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        cursor: pointer;
+        font-weight: 600;
+        font-family: 'Belanosima', sans-serif;
+        border-radius: 40px;
+    }
+
+    .reset:focus {
+        color: #ffff;
+        background-color: #fa8642;
+    }
+
+    .juego {
+        width: 500px;
+        height: 470px;
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        transform-style: preserve-3d;
+        perspective: 500px;
+        flex: wrap;
+    }
+
+    .item {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 3em;
+        background-color: #f1f1f1;
+        transition: 0.35s;
+        transform: rotateY(180deg);
+        border-radius: 20px;
+    }
+
+    .item::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-color: #f1f1f1;
+        transition: 0.35s;
+        transform: rotateY(0deg);
+        backface-visibility: hidden;
+    }
+
+    .item.boxOpen {
+        transform: rotateY(0deg);
+    }
+
+    .boxOpen:after, .boxMatch:after{
+        transform: rotateY(180deg);
+    }
+
+/*--------------------------COTIZACION VALORES PESO----------------------------------*/
+
+    .cajaGrandeValores{
+        margin-top: 5vh;
+        width: 50%;
+        height: 50vh;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        align-self: center;
+        background-color: rgba(0, 0, 0, 0.705);
+        border-radius: 40px;
+        border: 3px solid rgb(39, 39, 39);
+        border: 3px solid rgb(24, 24, 24);
+    }
+
+    .chartPesos {
+        cursor: pointer;
+        border-radius: 40px;
+        height: 45vh;
+        width: 45vw;
+        background-color: rgb(211, 211, 211);
+        display: flex;
+        justify-items: center
+    }
+
+    .chartPesosCanvas {
+        height: 60vh;
+        width: 60vw;
+    }
+
+    .formularioCajaGrande {
+        width: 60vw;
+        height: 10vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        border: 3px black solid;
+        color: rgb(255, 255, 255);
+        font-size: 4vh;
+        font-family: 'Belanosima', sans-serif;
+        text-shadow: 1px 2px 5px rgb(233, 233, 233);
+        font-weight: lighter;
+        background-color: #1a1a1ae3;
+        text-align: center;
+        margin-bottom: 5vh;
+        border-radius: 12px 12px 12px 12px;
+        border: 3px solid rgb(0, 0, 0);
+        border: 5px solid rgb(10, 10, 10);
+        border: 5px solid rgb(30, 30, 30);
+        box-shadow: 1px 2px 5px rgb(48, 48, 48);
+    }
+
+    .btnEnviar {
+        width: 8vw;
+        margin-left: 3vw;
+        margin-top: 1vh;
+    }
+
+    .option {
+        margin-left: 3vw;
+        height: fit-content;
+        width: 10vw;
+        background-color: #f2f2f2;
+        color: #333;
+        font-size: 16px;
+        padding: 10px;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+/*--------------------------CYBER PLANETA--------------------*/
+    .cajaGrandePlaneta {
+        width: 60vw;
+        background-color: rgba(0, 0, 0, 0.815);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 7vh;
+        padding-bottom: 5vh;
+        border-radius: 30px;
+    }
+
+    .tituloInfo {
+        width: fit-content;
+        padding: 3vh;
+        margin-bottom: 3vh;
+        font-size: 5vh;
+        color: rgb(235, 235, 235);
+        text-shadow: 1px 3px 5px black;
+        font-family: 'Belanosima', sans-serif;
+    }
+
+    .tituloInfo:hover {
+        background-color: #ffff;
+        color: #fa8642;
+        border-radius: 20px;
+    }
+
+/*----------------------TEST IMAGEN 3D----------------------------*/
+
+    .cajaTest {
+        width: 100%;
+        height: 50vh;
+        background-color: black;
+        perspective: 800px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+    }
+
+    .imagenTest1 {
+        background-image: url(../imagenes/lion.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border: 2px solid rgb(116, 116, 116);
+        border-radius: 30px;
+    }
+
+    .imagenTest2 {
+        transform: rotateY(180deg);
+        transition: transform 0.3s ease;
+        background-image: url(../imagenes/tigre.jpeg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border: 2px solid rgb(116, 116, 116);
+        border-radius: 30px;
+    }
+
+    .tarjeta {
+        position: relative;
+        width: 200px;
+        height: 300px;
+        transform-style: preserve-3d;
+        transition: transform 0.5s;
+    }
+
+    .tarjeta:hover {
+        transform: rotateY(180deg);
+    }
+
+    .cara, .dorso {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+    }
+
+
+    .tituloTarjeta {
+        padding-left: 1vh;
+        padding-top: 3vh;
+        height: 88%;
+        width: 90%;
+        font-size: 3vh;
+        color: rgb(248, 248, 248);
+        font-family: 'Belanosima', sans-serif;
+        text-shadow: 1px 2px 5px rgb(122, 122, 122);
+        font-weight: bold;
+        background-color: #222222e3;
+        text-align: center;
+        border-radius: 30px;
+        border: 3px solid rgb(0, 0, 0);
+        border: 5px solid rgb(10, 10, 10);
+        box-shadow: 1px 2px 5px rgb(48, 48, 48);
+    }
+
+/*-----------------------TABLAS---------------------------------------*/
+
+    .tabla1 {
+        width: 90vw;
+        height: fit-content;
+        background-color: rgba(0, 0, 0, 0.712);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+        margin-bottom: 5vh;
+    }
+
+    th:first-child{
+        border-top-left-radius: 30px;
+    }
+
+    th:last-child {
+        border-top-right-radius: 30px;
+    }
+
+    th {
+        width: 40vw;
+        height: 10vh;
+    }
+
+    th, td {
+        cursor: pointer;
+    }
+
+    th {
+        padding: 21px;
+        width: 20vw;
+        color: white;
+        text-shadow: 1px 2px 5px black;
+        font-size: 4vh;
+        font-family: 'Belanosima', sans-serif;
+        background-color: rgba(255, 163, 109, 0.911);
+        cursor: pointer;
+    }
+
+    td {
+        padding: 10px;
+        width: 20vw;
+        color: white;
+        text-shadow: 1px 2px 5px black;
+        font-size: 3vh;
+        font-family: 'Belanosima', sans-serif;
+        background-color: rgba(34, 34, 34, 0.507);
+        border-top: 1px solid white;
+    }
+
+    th:hover, td:hover {
+        color: rgb(250, 112, 70);
+        text-shadow: 1px 2px 5px black;
+        border: 1px solid rgb(250, 112, 70);
+    }
+}
